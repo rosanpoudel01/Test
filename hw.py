@@ -40,21 +40,46 @@ duplicate = []
 # append odd number in odd list
 # append duplicate entry to duplicate list dont use set
 
-for i in range(15):
-    a = int(input("enter a number"))
-    main.append(a)
-print(main)
+# for i in range(15):    Rosan Poudel
+#     a = int(input(f"Enter {i+1} number: "))
+#     main.append(a)
+#     if a % 2 == 0 and a not in even:
+#         even.append(a)
+#     elif a in even:
+#         duplicate.append(a)
+#     elif a % 2 != 0 and a not in odd:
+#         odd.append(a)
+#     elif a in odd:
+#         duplicate.append(a)
+# for i in range(15):
+#     a = int(input(f"Enter {i+1} number: "))
+#     if a in main:
+#         duplicate.append(a)
+#     else:
+#         if a % 2 == 0:
+#             even.append(a)
+#         else:
+#             odd.append(a)
+#     main.append(a)
 
-for i in main:
-    if i % 2 == 0 and i not in even:
-        even.append(i)
-    elif i in even:
-        duplicate.append(i)
-print(even)
-for i in main:
-    if i % 2 != 0 and i not in odd:
-        odd.append(i)
-    elif i in odd:
-        duplicate.append(i)
-print(odd)
-print(duplicate)
+
+# print(main)
+# print(even)
+# print(odd)
+# print(duplicate)
+
+# colors = ["yellow", "green", "red", "blue", "yellow", "orange", "red"]
+# to_be_removed = ["yellow", "red"]
+# a = filter(lambda i: i not in to_be_removed, colors)
+
+# b = list(a)
+# print(b)
+
+a = "876d59e45"
+summ = 0
+for i in a:
+    if i.isnumeric():
+        summ = summ + int(i)
+
+print(summ)
+print(sum(map(int, filter(str.isnumeric, a))))
